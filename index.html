@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Sort Race 1vs1</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1>🏁 Sort Race — 1 vs 1</h1>
+        <div class="controls">
+          <label
+            >Jumlah angka:
+            <select id="countSelect">
+              <option value="5">5</option>
+              <option value="7" selected>7</option>
+              <option value="9">9</option>
+              <option value="11">11</option>
+            </select>
+          </label>
+          <button id="newBtn">Mulai Baru</button>
+        </div>
+      </header>
+
+      <main class="arena">
+        <section class="player left" data-player="1">
+          <div class="player-header">
+            <h2>Player 1</h2>
+            <div class="status">
+              <span>Next: <b id="p1-next">—</b></span>
+              <span>Waktu: <b id="p1-time">0.0</b>s</span>
+              <span>Penalty: <b id="p1-penalty">0</b>s</span>
+            </div>
+          </div>
+          <div class="pool" id="p1-pool" aria-label="Pool Player 1"></div>
+          <div class="sorted" id="p1-sorted">
+            <div class="placeholder">Area urut</div>
+          </div>
+        </section>
+
+        <aside class="center">
+          <div class="info">
+            <p id="message">Tekan “Mulai Baru” untuk memulai!</p>
+            <p class="rules">
+              Aturan: Klik/tap angka dari kecil ke besar. Salah klik = penalti 2
+              detik.
+            </p>
+            <h3 id="winner"></h3>
+          </div>
+        </aside>
+
+        <section class="player right" data-player="2">
+          <div class="player-header">
+            <h2>Player 2</h2>
+            <div class="status">
+              <span>Next: <b id="p2-next">—</b></span>
+              <span>Waktu: <b id="p2-time">0.0</b>s</span>
+              <span>Penalty: <b id="p2-penalty">0</b>s</span>
+            </div>
+          </div>
+          <div class="pool" id="p2-pool" aria-label="Pool Player 2"></div>
+          <div class="sorted" id="p2-sorted">
+            <div class="placeholder">Area urut</div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <small
+          >✨ HTML + CSS + JS — versi responsif & sentuh (perbaikan layout &
+          winner logic)</small
+        >
+      </footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
